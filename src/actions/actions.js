@@ -9,8 +9,16 @@ export const addTask = () => {
   };
 }
 export const editTaskText = (index, text) => {
-  console.log('edit task');
   return {
-    type: types.EDIT_TASK_TEXT
+    type: types.EDIT_TASK_TEXT,
+    index: index,
+    text: text
+  }
+}
+export const editTaskStatus = (index, status) => {
+  return {
+    type: types.EDIT_TASK_STATUS,
+    index: index,
+    status: status
   }
 }

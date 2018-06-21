@@ -10,6 +10,7 @@ class TaskContainer extends React.Component{
     super(props);
   }
   render(){
+    console.log('tasks: ', this.props.tasks);
     let countTasks, tasksCount, tasksBanner;
     if (this.props.tasks.length > 0) {
       countTasks = this.props.tasks.filter(task => !task.completed);
@@ -27,15 +28,17 @@ class TaskContainer extends React.Component{
     return(
       <div>
         <div>{tasksBanner}</div>
-        <TaskList tasks={this.props.tasks} onAddTaskClick={this.props.onAddTaskClick} onEditTaskText={this.props.onEditTaskText}/>
+        <TaskList tasks={this.props.tasks} onAddTaskClick={this.props.onAddTaskClick} onEditTaskText={this.props.onEditTaskText} onEditTaskStatus={this.props.onEditTaskStatus}/>
       </div>
     )
   }
 }
 
 TaskContainer.propTypes = {
-  tasks: PropTypes.array.isRequired
-  // actions: PropTypes.object.isRequired
+  tasks: PropTypes.array.isRequired,
+  onAddTaskClick: PropTypes.func.isRequired,
+  onEditTaskText: PropTypes.func.isRequired,
+  onEditTaskStatus: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state, props) {
@@ -47,7 +50,9 @@ function mapStateToProps(state, props) {
 //as using bindActionCreators is a way to do some extra code (such as calculations or checks) before dispatching the action
 //but I would just do the extra checks in the action after dispatching like in the addTask() in actions.js
 const mapDispatchToProps = {
-  onAddTaskClick: taskActions.addTask
+  onAddTaskClick: taskActions.addTask,
+  onEditTaskText: taskActions.editTaskText,
+  onEditTaskStatus: taskActions.editTaskStatus
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TaskContainer);

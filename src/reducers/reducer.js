@@ -3,6 +3,7 @@ const defaultState = {
   tasks: []
 }
 export default (state = defaultState, action) => {
+  let tasks = [...state.tasks];
  switch (action.type) {
   case 'ADD_TASK':
    return {
@@ -16,8 +17,20 @@ export default (state = defaultState, action) => {
      ]
    }
   case 'EDIT_TASK_TEXT':
+    tasks[action.index]['text'] = action.text;
     return {
-      ...state
+      ...state,
+      tasks: [
+        ...tasks
+      ]
+    }
+  case 'EDIT_TASK_STATUS':
+    tasks[action.index]['completed'] = action.status;
+    return {
+      ...state,
+      tasks: [
+        ...tasks
+      ]
     }
   default:
     return state

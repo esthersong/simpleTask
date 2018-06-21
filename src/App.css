@@ -80,11 +80,23 @@
   -o-transition: 0.4s;
   transition: 0.4s;
   opacity: 1;
+  background-color: #fff;
 }
-.task-edit-text input {
-  border: none;
-  outline: none;
-}
+  .task-edit-text form{
+    text-align: left;
+    margin-top: 20px;
+  }
+    .task-edit-text input {
+      border: none;
+      outline: none;
+    }
+    .task-edit-text form button {
+      background-color: none;
+      border: none;
+      outline: none;
+      color: blue;
+      float: right;
+    }
 .add-task-btn{
   position: relative;
   height: 110px;
