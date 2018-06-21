@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Task Card */
+.task{
+  position: relative;
+  height: 110px;
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px 2px #e8e8e8;
+}
+.task-content{
+  padding: 20px;
+}
+.task-details{
+  text-align: left;
+}
+  .task-status{
+    font-size: 12px;
+  }
+.overlay-task-box {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.task-edit-btns{
+  background-color: gray;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+}
+.task-edit-btns.show{
+  opacity: 1;
+  display: block;
+}
+.task-edit-btns div{
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+  .task-edit-btns div:first-child p{
+    border-right: 1px solid #fff;
+  }
+.task-edit-text {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+}
+.task-edit-text input {
+  border: none;
+  outline: none;
+}
+.add-task-btn{
+  position: relative;
+  height: 110px;
+  line-height: 120px;
+  width: 90%;
+  margin: 10px auto;
+}
+.add-task-btn:hover{
+  cursor: pointer;
+}
