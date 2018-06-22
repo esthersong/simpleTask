@@ -17,4 +17,11 @@ const TaskList = ({ tasks, onAddTaskClick, onEditTaskText, onEditTaskStatus}) =>
   </div>
 )
 
+TaskList.propTypes = {
+  tasks: PropTypes.array.isRequired,
+  onAddTaskClick: PropTypes.func.isRequired,
+  onEditTaskText: PropTypes.func.isRequired,
+  onEditTaskStatus: PropTypes.func.isRequired
+};
+
 export default TaskList

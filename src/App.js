@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TaskContainer from './components/TaskContainer';
 import Footer from './components/Footer';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {

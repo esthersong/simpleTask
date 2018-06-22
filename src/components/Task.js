@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import * as taskActions from '../actions/actions';
 
 class Task extends React.Component {
   constructor(props) {
@@ -50,7 +48,7 @@ class Task extends React.Component {
     return (
       <div className="task" onMouseEnter={this.showEditButtons} onMouseLeave={this.hideEditButtons}>
         <div className="task-content task-details">
-          <p className="task-text">{this.props.text == "" ? "Task" : this.props.text}</p>
+          <p className="task-text">{this.props.text === "" ? "Task" : this.props.text}</p>
           <p className="task-status" style={{color: this.props.completed ? '#35c675' : '#a5bbc7'}}>{this.props.completed ? "Completed" : "Active"}</p>
         </div>
         <div className={"task-content overlay-task-box task-edit-btns " + (this.state.showEditButtons ? 'show' : 'hidden')}>
