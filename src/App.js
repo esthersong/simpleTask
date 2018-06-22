@@ -8,6 +8,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <div className="container">
+            <nav className="navbar navbar-expand-lg navbar-light ">
+              <span className="navbar-brand">SimpleTask</span>
+              <span>Hello, User!</span>
+            </nav>
+          </div>
         </header>
         <TaskContainer />
       </div>

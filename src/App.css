@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .App-logo {
@@ -7,12 +8,6 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
 
 .App-title {
   font-size: 1.5em;
@@ -26,13 +21,60 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/* navbar */
+header{
+  box-shadow: 0px 1px 1px 2px #e8e8e8;
+}
+nav.navbar{
+  padding-left: 0px;
+}
+.navbar span.navbar-brand{
+  color: #2fa6ef;
+}
+
+
+/* Task Page Banner */
+.banner{
+  text-align: left;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  padding: 30px;
+  color: #fff;
+}
+  .banner h3{
+    font-size: 24px;
+  }
+  .banner p{
+    font-size: 14px;
+  }
+  .banner-blue{
+    background-color: #2fa6ef;
+  }
+  .banner-green{
+    background-color: #35c675;
+  }
+
+/* Task List */
+.add-task-btn{
+  position: relative;
+  height: 110px;
+  line-height: 120px;
+  width: 90%;
+  margin: 10px 0;
+  font-weight: 400;
+  color: #a5bbc7;
+}
+.add-task-btn:hover{
+  cursor: pointer;
+}
 
 /* Task Card */
 .task{
   position: relative;
   height: 110px;
   width: 90%;
-  margin: 10px auto;
+  margin: 10px 0px;
   border-radius: 2px;
   box-shadow: 0px 1px 1px 2px #e8e8e8;
 }
@@ -44,6 +86,7 @@
 }
   .task-status{
     font-size: 12px;
+    font-weight: 400;
   }
 .overlay-task-box {
   z-index: 10;
@@ -54,7 +97,7 @@
   left: 0;
 }
 .task-edit-btns{
-  background-color: gray;
+  background-color: #26475a;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -o-transition: 0.4s;
@@ -70,9 +113,13 @@
   height: 100%;
   width: 50%;
   text-align: center;
+  font-size: 14px;
 }
   .task-edit-btns div:first-child p{
     border-right: 1px solid #fff;
+  }
+  .task-edit-btns .edit-btn{
+    color: #fff;
   }
 .task-edit-text {
   -webkit-transition: 0.4s;
@@ -94,16 +141,6 @@
       background-color: none;
       border: none;
       outline: none;
-      color: blue;
+      color: #2fa6ef;
       float: right;
     }
-.add-task-btn{
-  position: relative;
-  height: 110px;
-  line-height: 120px;
-  width: 90%;
-  margin: 10px auto;
-}
-.add-task-btn:hover{
-  cursor: pointer;
-}

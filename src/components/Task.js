@@ -33,7 +33,6 @@ class Task extends React.Component {
     this.props.onEditTaskStatus(this.props.index, !this.props.completed)
   }
   editText = () => {
-    console.log('show edit box')
     this.setState({
       showEditText: true,
       showEditButtons: false
@@ -52,11 +51,11 @@ class Task extends React.Component {
       <div className="task" onMouseEnter={this.showEditButtons} onMouseLeave={this.hideEditButtons}>
         <div className="task-content task-details">
           <p>{this.props.text}</p>
-          <p className="task-status" style={{color: this.props.completed ? 'green' : 'gray'}}>{this.props.completed ? "Completed" : "Active"}</p>
+          <p className="task-status" style={{color: this.props.completed ? '#35c675' : 'gray'}}>{this.props.completed ? "Completed" : "Active"}</p>
         </div>
         <div className={"task-content overlay-task-box task-edit-btns " + (this.state.showEditButtons ? 'show' : 'hidden')}>
-          <div style={{color: this.props.completed ? "red" : "green"}}><p onClick={this.editStatus}>{this.props.completed ? "Undo" : "Complete"}</p></div>
-          <div><p onClick={this.editText}>Edit</p></div>
+          <div style={{color: this.props.completed ? "red" : "#35c675"}}><p onClick={this.editStatus}>{this.props.completed ? "Undo" : "Complete"}</p></div>
+          <div><p className="edit-btn" onClick={this.editText}>Edit</p></div>
         </div>
         <div className="task-content task-edit-text overlay-task-box" style={{display: this.state.showEditText ? 'block' : 'none'}}>
           <form onSubmit={this.submitTaskText}>
