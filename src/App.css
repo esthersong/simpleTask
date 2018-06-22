@@ -1,52 +1,177 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767px) {
+  .App h1{
+    margin-top: 40px;
+    font-size: 22px;
+  }
+  span.navbar-brand{
+    font-size: 16px;
+  }
+  .nav-username{
+    font-size: 12px;
+  }
+
+  /* Banner */
+  .banner{
+    text-align: left;
+    padding: 5px 15px;
+  }
+  .banner h3{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .banner p{
+    font-size: 10px;
+  }
+
+  .add-task-btn{
+    height: 85px;
+    line-height: 85px;
+    font-size: 14px;
+  }
+
+  .task{
+    height: 85px;
+  }
+  .task-content{
+    padding: 15px;
+  }
+    .task-text{
+      font-size: 14px;
+    }
+  .task-edit-btns div{
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .task-edit-text form{
+    margin-top: 10px;
+  }
+    .task-edit-text input {
+      font-size: 12px;
+    }
+
+    .task-edit-text form button {
+      font-size: 12px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .App h1{
+    margin-top: 60px;
+    font-size: 30px;
+  }
+
+  /* ****** navbar ****** */
+  span.navbar-brand{
+    font-size: 20px;
+  }
+  .nav-username{
+    font-size: 16px;
+  }
+
+  /* Banner */
+  .banner{
+    padding: 10px 20px;
+  }
+  .banner h3{
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .banner p{
+    font-size: 12px;
+  }
+
+  .add-task-btn{
+    height: 95px;
+    line-height: 95px;
+    font-size: 18px;
+  }
+
+  .task{
+    height: 95px;
+  }
+  .task-content{
+    padding: 20px;
+  }
+    .task-text{
+      font-size: 18px;
+    }
+  .task-edit-btns div{
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .task-edit-text form{
+    margin-top: 15px;
+  }
+    .task-edit-text input {
+      font-size: 14px;
+    }
+
+    .task-edit-text form button {
+      font-size: 14px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+html, body, #root {
+  height: 100%;
+}
 .App {
-  text-align: center;
   font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+  position: relative;
 }
+  .App h1{
+    color: #444444;
+    font-weight: 700;
+    text-align: left;
+  }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-/* navbar */
-header{
+/* ******* navbar ******* */
+.nav-container{
   box-shadow: 0px 1px 1px 2px #e8e8e8;
 }
 nav.navbar{
   padding-left: 0px;
+  justify-content: space-between;
 }
 .navbar span.navbar-brand{
   color: #2fa6ef;
+  font-weight: 700;
+}
+.nav-username{
+  color: #444444;
 }
 
 
-/* Task Page Banner */
+/* ******* Task Page Banner ******* */
 .banner{
   text-align: left;
-  margin-top: 80px;
+  margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 3px;
-  padding: 30px;
   color: #fff;
 }
   .banner h3{
-    font-size: 24px;
+    margin-top: 10px;
+    font-weight: 600;
   }
   .banner p{
-    font-size: 14px;
+    font-weight: 300;
   }
   .banner-blue{
     background-color: #2fa6ef;
@@ -55,35 +180,46 @@ nav.navbar{
     background-color: #35c675;
   }
 
-/* Task List */
+/* ******* Task-Container ******* */
+.task-container{
+  padding-bottom: 100px;
+}
+  .tasks-content{
+    padding: 0px 60px;
+  }
+
+
+/* ******* Task List ******* */
 .add-task-btn{
   position: relative;
-  height: 110px;
-  line-height: 120px;
-  width: 90%;
   margin: 10px 0;
   font-weight: 400;
   color: #a5bbc7;
+  text-align: center;
 }
 .add-task-btn:hover{
   cursor: pointer;
 }
 
-/* Task Card */
+
+/* ******* Task Card ****** */
 .task{
   position: relative;
-  height: 110px;
-  width: 90%;
+  /* width: 90%; */
   margin: 10px 0px;
   border-radius: 2px;
   box-shadow: 0px 1px 1px 2px #e8e8e8;
 }
-.task-content{
-  padding: 20px;
-}
 .task-details{
   text-align: left;
 }
+  .task-details p{
+    margin-bottom: 10px;
+  }
+  .task-text{
+    color: #6c7d86;
+    font-weight: 600;
+  }
   .task-status{
     font-size: 12px;
     font-weight: 400;
@@ -103,6 +239,9 @@ nav.navbar{
   -o-transition: 0.4s;
   transition: 0.4s;
   opacity: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  /* line-height: 65px; */
 }
 .task-edit-btns.show{
   opacity: 1;
@@ -113,10 +252,13 @@ nav.navbar{
   height: 100%;
   width: 50%;
   text-align: center;
-  font-size: 14px;
 }
+  .task-edit-btns p{
+    height: 25px;
+  }
   .task-edit-btns div:first-child p{
     border-right: 1px solid #fff;
+    box-sizing: border-box;
   }
   .task-edit-btns .edit-btn{
     color: #fff;
@@ -131,11 +273,11 @@ nav.navbar{
 }
   .task-edit-text form{
     text-align: left;
-    margin-top: 20px;
   }
     .task-edit-text input {
       border: none;
       outline: none;
+      color: #6c7d86;
     }
     .task-edit-text form button {
       background-color: none;
@@ -143,4 +285,19 @@ nav.navbar{
       outline: none;
       color: #2fa6ef;
       float: right;
+      font-weight: 600;
     }
+
+
+/* Footer */
+.footer{
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: #a5bbc7;
+  font-size: 14px;
+  font-weight: 300;
+}

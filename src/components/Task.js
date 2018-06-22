@@ -50,17 +50,17 @@ class Task extends React.Component {
     return (
       <div className="task" onMouseEnter={this.showEditButtons} onMouseLeave={this.hideEditButtons}>
         <div className="task-content task-details">
-          <p>{this.props.text}</p>
-          <p className="task-status" style={{color: this.props.completed ? '#35c675' : 'gray'}}>{this.props.completed ? "Completed" : "Active"}</p>
+          <p className="task-text">{this.props.text == "" ? "Task" : this.props.text}</p>
+          <p className="task-status" style={{color: this.props.completed ? '#35c675' : '#a5bbc7'}}>{this.props.completed ? "Completed" : "Active"}</p>
         </div>
         <div className={"task-content overlay-task-box task-edit-btns " + (this.state.showEditButtons ? 'show' : 'hidden')}>
-          <div style={{color: this.props.completed ? "red" : "#35c675"}}><p onClick={this.editStatus}>{this.props.completed ? "Undo" : "Complete"}</p></div>
+          <div style={{color: this.props.completed ? "#f0684f" : "#35c675"}}><p onClick={this.editStatus}>{this.props.completed ? "Undo" : "Complete"}</p></div>
           <div><p className="edit-btn" onClick={this.editText}>Edit</p></div>
         </div>
         <div className="task-content task-edit-text overlay-task-box" style={{display: this.state.showEditText ? 'block' : 'none'}}>
           <form onSubmit={this.submitTaskText}>
-            <input type="text" placeholder="Edit task name..." value={this.state.text} onChange={this.handleChange}/>
-            <button type="submit">Save</button>
+            <input className="col-sm-9 col-xs-9" maxLength="30" type="text" placeholder="Edit task name..." value={this.state.text} onChange={this.handleChange}/>
+            <button className="col-sm-3 col-xs-3" type="submit">Save</button>
           </form>
         </div>
       </div>

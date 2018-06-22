@@ -26,9 +26,14 @@ class TaskContainer extends React.Component{
       tasksBanner = <div className="col-md-12"><div className="banner banner-blue"><h3>Complete all tasks</h3> <p>You have {tasksCount} active tasks</p></div></div>
     }
     return(
-      <div className="container">
-        <div className="row">{tasksBanner}</div>
-        <TaskList tasks={this.props.tasks} onAddTaskClick={this.props.onAddTaskClick} onEditTaskText={this.props.onEditTaskText} onEditTaskStatus={this.props.onEditTaskStatus}/>
+      <div className="task-container">
+        <div className="container">
+          <div className="tasks-content">
+            <h1>Your tasks</h1>
+            <div className="row">{tasksBanner}</div>
+            <TaskList tasks={this.props.tasks} onAddTaskClick={this.props.onAddTaskClick} onEditTaskText={this.props.onEditTaskText} onEditTaskStatus={this.props.onEditTaskStatus}/>
+          </div>
+        </div>
       </div>
     )
   }
