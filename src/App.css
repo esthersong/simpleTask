@@ -30,8 +30,16 @@
     font-size: 14px;
   }
 
+  /* ******* Task-Container ******* */
+  .task-container{
+    padding-bottom: 80px;
+  }
+    .tasks-content{
+      padding: 0px 5px;
+    }
+
   .task{
-    height: 85px;
+    min-height: 85px;
   }
   .task-content{
     padding: 15px;
@@ -89,14 +97,22 @@
     font-size: 18px;
   }
 
+  /* ******* Task-Container ******* */
+  .task-container{
+    padding-bottom: 100px;
+  }
+    .tasks-content{
+      padding: 0px 60px;
+    }
+
   .task{
-    height: 95px;
+    min-height: 95px;
   }
   .task-content{
     padding: 20px;
   }
     .task-text{
-      font-size: 18px;
+      font-size: 16px;
     }
   .task-edit-btns div{
     font-size: 14px;
@@ -180,14 +196,6 @@ nav.navbar{
     background-color: #35c675;
   }
 
-/* ******* Task-Container ******* */
-.task-container{
-  padding-bottom: 100px;
-}
-  .tasks-content{
-    padding: 0px 60px;
-  }
-
 
 /* ******* Task List ******* */
 .add-task-btn{
@@ -200,7 +208,6 @@ nav.navbar{
 .add-task-btn:hover{
   cursor: pointer;
 }
-
 
 /* ******* Task Card ****** */
 .task{
@@ -280,7 +287,7 @@ nav.navbar{
       color: #6c7d86;
     }
     .task-edit-text form button {
-      background-color: none;
+      background-color: #fff;
       border: none;
       outline: none;
       color: #2fa6ef;

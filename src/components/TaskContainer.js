@@ -19,11 +19,11 @@ class TaskContainer extends React.Component{
       tasksCount = -1;
     }
     if(tasksCount === 0) {
-      tasksBanner = <div className="col-md-12"><div className="banner banner-green"><h3>All tasks completed</h3> <p>Well done!</p></div></div>
+      tasksBanner = <div className="col-12"><div className="banner banner-green"><h3>All tasks completed</h3> <p>Well done!</p></div></div>
     } else if (tasksCount === -1) {
-      tasksBanner = <div className="col-md-12"><div className="banner banner-blue"><h3>You have no tasks</h3><p>Add tasks to complete</p></div></div>
+      tasksBanner = <div className="col-12"><div className="banner banner-blue"><h3>You have no tasks</h3><p>Add tasks to complete</p></div></div>
     } else {
-      tasksBanner = <div className="col-md-12"><div className="banner banner-blue"><h3>Complete all tasks</h3> <p>You have {tasksCount} active tasks</p></div></div>
+      tasksBanner = <div className="col-12"><div className="banner banner-blue"><h3>Complete all tasks</h3> <p>You have {tasksCount} active tasks</p></div></div>
     }
     return(
       <div className="task-container">

@@ -59,8 +59,8 @@ class Task extends React.Component {
         </div>
         <div className="task-content task-edit-text overlay-task-box" style={{display: this.state.showEditText ? 'block' : 'none'}}>
           <form onSubmit={this.submitTaskText}>
-            <input className="col-sm-9 col-xs-9" maxLength="30" type="text" placeholder="Edit task name..." value={this.state.text} onChange={this.handleChange}/>
-            <button className="col-sm-3 col-xs-3" type="submit">Save</button>
+            <input className="col-9" maxLength="28" type="text" placeholder="Edit task name..." value={this.state.text} onChange={this.handleChange}/>
+            <button className="col-3" type="submit">Save</button>
           </form>
         </div>
       </div>
