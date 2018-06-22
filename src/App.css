@@ -135,12 +135,12 @@
 @media (min-width: 992px) {
 
 }
-
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
 }
 
+/* ------------------------------ */
 
 html, body, #root {
   height: 100%;
@@ -155,7 +155,21 @@ html, body, #root {
     font-weight: 700;
     text-align: left;
   }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #a5bbc7;
+    opacity: 1; /* Firefox */
+    font-weight: 300;
+}
 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #a5bbc7;
+    font-weight: 300;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #a5bbc7;
+    font-weight: 300;
+}
 
 /* ******* navbar ******* */
 .nav-container{
